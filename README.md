@@ -59,3 +59,18 @@ This project is ideal as a:
 ![Home Page](screenshots/d7.png)
 ![Home Page](screenshots/d8.png)
 
+
+---
+
+## 🧑‍💻 Made By
+
+**💙 Tirth Gajera**, as part of a creative UI challenge 🖌️  
+Focused on clean code, design-first thinking, and user-centric layout.
+
+---
+
+## ⭐ Why This Project?
+
+> Designed with the goal to simulate a real-world trip planner, *My Trip* focuses on **visually engaging interfaces** and **clean user experience**, proving that great design can stand strong even before the logic kicks in.
+
+---
