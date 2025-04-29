@@ -1,0 +1,183 @@
+<html>
+  <head>
+    <title>Profile</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      cursor: url("static/img/cursor.png"),auto;
+    }
+    body {
+      background-color: #fff;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background-image : url('https://wallpapers-clan.com/wp-content/uploads/2024/03/starfall-night-sky-mountains-aesthetic-gif-cover-desktop-wallpaper.gif');
+      background-repeat : no-repeat;
+      background-size:cover;
+    }
+
+    .card {
+      width: 350px;
+      background-color: #efefef;
+      border: none;
+      cursor: pointer;
+      transition: all 0.5s;
+      background:transparent;
+      backdrop-filter: blur(21px);
+      border:2px solid gray;
+      box-shadow: 0px 0px 20px;
+      border-radius:17px;
+      text-align:center;
+    }
+
+    .image img {
+      transition: all 0.5s;
+    }
+
+    .card:hover .image img {
+      transform: scale(1.5);
+    }
+
+    .btn {
+      height: 140px;
+      width: 140px;
+      border-radius: 50%;
+    }
+
+    .name {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .idd {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .idd1 {
+      font-size: 12px;
+    }
+
+    .number {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .follow {
+      font-size: 12px;
+      font-weight: 500;
+      color: #13357B;
+    }
+
+    .btn1 {
+      height: 40px;
+      width: 150px;
+      border: none;
+      background-color: #13357B;
+      color:white;
+      font-size: 15px;
+    }
+
+    .text span {
+      font-size: 17px;
+      color: black;
+      font-weight: bold;
+    }
+
+    .icons i {
+      font-size: 19px;
+    }
+
+    hr .new1 {
+      border: 1px solid;
+    }
+
+    .join {
+      font-size: 14px;
+      color: #13357B;
+      font-weight: bold;
+    }
+
+    .date {
+      background-color: #ccc;
+    }
+    img{
+        border-radius:50%;
+    }
+    .big_round{
+        background-color:#13357B;
+    }
+    #back{
+        position:fixed;
+        top:5%;
+        left:3%;
+        background-color : white;
+        color:#13357B;
+        padding:10px;
+        font-weight:bold;
+        border-radius:10px;
+    }
+    #back a{
+        text-decoration:none;
+    }
+    #back a:visited{
+        color:#13357B;
+    }
+  </style>
+  <body>
+    <div id="back">
+        <a href="{% url 'index' %}"> <-- Continue Browsing </a>
+    </div>
+    <div class="container mt-4 mb-4 p-3 d-flex justify-content-center">
+      <div class="card p-4">
+        <div
+          class="image d-flex flex-column justify-content-center align-items-center"
+        >
+          <button class="btn btn-secondary big_round">
+            <img
+              src="https://img.freepik.com/premium-vector/man-avatar-profile-picture-vector-illustration_268834-538.jpg"
+              height="100"
+              width="100"
+           
+            >
+          </button>
+          <span class="name mt-3">{{request.user}}</span>
+          <span class="idd">{{request.user.email}}</span>
+          <div
+            class="d-flex flex-row justify-content-center align-items-center gap-2"
+          >
+          </div>
+          <div
+            class="d-flex flex-row justify-content-center align-items-center mt-3"
+          >
+            <span class="number"
+              >2 <span class="follow">Trips</span></span
+            >
+          </div>
+          <div class="d-flex mt-2">
+            <button class="btn1 btn-dark">Edit Profile</button>
+          </div>
+          <div class="text mt-3">
+            <span
+              >Member of My Trip<br><br>
+              Nature Lover || Weekend Traveler
+            </span>
+          </div>
+        
+          <div class="px-2 rounded mt-4 date">
+            <span class="join">{{request.user.date_joined}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
